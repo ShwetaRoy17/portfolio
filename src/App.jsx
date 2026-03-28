@@ -7,6 +7,9 @@ import Projects from "./components/sections/Projects";
 import Stats from "./components/sections/Stats";
 import Experience from "./components/sections/Experience";
 import Contact from "./components/sections/Contact";
+import Cursor from "./components/ui/Cursor";
+import BackgroundFX from "./components/ui/Background";
+
 import useReveal from "./hooks/useReveal";
 import useStickyNav from "./hooks/useStickyNav";
 
@@ -18,6 +21,8 @@ export default function App() {
 
   return (
     <>
+    <BackgroundFX />
+      <Cursor />
       <Header />
       <main>
         <Hero />
