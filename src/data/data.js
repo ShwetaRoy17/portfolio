@@ -3,7 +3,7 @@ export const profile = {
   shortName: "Shweta",
   role: "Backend-Focused Software Engineer",
   location: "India",
-  email: "your-real-email@example.com",
+  email: "royshweta1712@gmail.com",
   github: "https://github.com/ShwetaRoy17",
   linkedin: "https://www.linkedin.com/in/shweta-roy-104145227/",
   leetcode: "https://leetcode.com/u/shwetaroy1712/",
@@ -40,13 +40,10 @@ export const heroStats = [
 ];
 
 export const about = {
-  lede:
-    "Backend-focused software engineer with experience building scalable, low-latency systems across fintech and real-time streaming platforms.",
+  lede: "Engineering for scale, optimized for speed.",
   paragraphs: [
-    "I have worked on high-performance APIs, multithreaded systems, and distributed streaming pipelines supporting large-scale user traffic. My engineering approach emphasizes scalability, reliability, and clean system design.",
-    "My background combines backend engineering with strong fundamentals in concurrent programming, distributed architectures, and performance optimization.",
-    "I also bring research depth through work in Federated Learning and deep learning systems, including a GAN-CNN-LSTM framework for AQI forecasting published in an Elsevier journal.",
-    "I enjoy solving difficult engineering problems involving scale, throughput, latency, fault tolerance, and real-time processing."
+    "Backend Engineer focused on distributed architectures and high-throughput streaming systems.",
+    "I combine a deep understanding of concurrent programming with a research background in Deep Learning to build the next generation of reliable, real-time platforms."
   ],
   traits: [
     {
