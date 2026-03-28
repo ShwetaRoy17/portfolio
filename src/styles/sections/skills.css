@@ -1,0 +1,122 @@
+#skills {
+  position: relative;
+}
+
+.skills-header-row {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 64px;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.skills-heading-block {
+  text-align: center;
+}
+
+.skills-heading-block .s-tag {
+  justify-content: center;
+}
+
+.skills-heading-block .s-desc {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+.skills-nav-arrow {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--t0);
+  font-family: var(--f-code);
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-nav-arrow:hover:not(:disabled) {
+  border-color: var(--lime);
+  color: var(--lime);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.skills-nav-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.toolkit-belt-wrap {
+  overflow: hidden;
+}
+
+.toolkit-belt {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.toolkit-belt-card {
+  position: relative;
+  min-height: 280px;
+  background: #111118;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 24px;
+  overflow: hidden;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.25s;
+}
+
+.toolkit-belt-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.toolkit-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.toolkit-icon {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.toolkit-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.toolkit-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.toolkit-tag {
+  padding: 4px 10px;
+  border-radius: 7px;
+  font-family: var(--f-code);
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: #5a5a72;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.toolkit-tag:hover {
+  border-color: rgba(200, 241, 53, 0.28);
+  color: var(--t1);
+}

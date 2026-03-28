@@ -1,0 +1,129 @@
+:root {
+  --ink: #050508;
+  --ink2: #0c0c12;
+  --panel: #111118;
+  --glass: rgba(255, 255, 255, 0.035);
+  --line: rgba(255, 255, 255, 0.07);
+  --line2: rgba(255, 255, 255, 0.04);
+  --lime: #c8f135;
+  --lime2: #e4ff7a;
+  --cyan: #38d9f5;
+  --blush: #ff7c9e;
+  --violet: #9b8fff;
+  --t0: #ffffff;
+  --t1: #b4b4c8;
+  --t2: #5a5a72;
+  --t3: #2a2a3a;
+  --f-head: "Fraunces", Georgia, serif;
+  --f-ui: "Syne", sans-serif;
+  --f-code: "DM Mono", monospace;
+  --nav-h: 72px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--t0);
+  font-family: var(--f-ui);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main,
+section,
+footer,
+.site-header {
+  position: relative;
+  z-index: 2;
+}
+
+section {
+  padding: 120px 56px;
+}
+
+.s-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--f-code);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 16px;
+}
+
+.s-tag::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--lime);
+}
+
+.s-h2 {
+  font-family: var(--f-head);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.s-h2 em {
+  font-style: italic;
+  color: var(--lime);
+}
+
+.s-desc {
+  font-size: 16px;
+  color: var(--t2);
+  line-height: 1.85;
+  max-width: 720px;
+  margin-bottom: 72px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.7s, transform 0.7s;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+.btn-primary,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+.btn-ghost {
+  border: 1px solid var(--line);
+  color: var(--t0);
+}

@@ -1,0 +1,136 @@
+@media (max-width: 1024px) {
+  .nav {
+    padding: 0 28px;
+  }
+
+  .n-links {
+    display: none;
+  }
+
+  section {
+    padding: 80px 28px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    padding: 0 28px;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
+  #about::before,
+  #projects::before,
+  #experience::before {
+    left: 28px;
+    right: 28px;
+  }
+
+  .about-grid,
+  .contact-grid,
+  .exp-layout,
+  .depth-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .skills-header-row {
+    grid-template-columns: 56px minmax(0, 1fr) 56px;
+    gap: 14px;
+  }
+
+  .toolkit-belt {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-controls {
+    margin-bottom: 16px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 24px 28px;
+  }
+}
+
+@media (max-width: 900px) {
+  .project-belt-scene {
+    height: 620px;
+  }
+
+  .project-belt-track {
+    width: 340px;
+    height: 520px;
+  }
+
+  .belt-card {
+    width: 340px;
+    height: 520px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    cursor: auto;
+  }
+
+  #c-dot,
+  #c-ring {
+    display: none;
+  }
+
+  .trait-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-header-row {
+    grid-template-columns: 46px minmax(0, 1fr) 46px;
+    align-items: center;
+  }
+
+  .skills-nav-arrow {
+    width: 46px;
+    height: 46px;
+  }
+
+  .toolkit-belt-card {
+    min-height: auto;
+  }
+
+  .project-belt-scene {
+    height: 560px;
+    perspective: 1300px;
+  }
+
+  .project-belt-track {
+    width: 290px;
+    height: 470px;
+  }
+
+  .belt-card {
+    width: 290px;
+    height: 470px;
+  }
+
+  .proj-thumb {
+    height: 150px;
+    font-size: 48px;
+  }
+
+  .proj-body {
+    padding: 18px;
+  }
+
+  .project-arrow {
+    width: 46px;
+    height: 46px;
+  }
+}

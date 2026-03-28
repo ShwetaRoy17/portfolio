@@ -1,0 +1,110 @@
+#experience {
+  background: var(--ink2);
+  position: relative;
+}
+
+#experience::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 56px;
+  right: 56px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--violet), transparent);
+}
+
+.exp-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 56px;
+}
+
+.exp-tabs {
+  position: sticky;
+  top: 96px;
+  height: fit-content;
+}
+
+.exp-tab {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  padding: 14px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: var(--f-code);
+  font-size: 12.5px;
+  color: var(--t2);
+  border: none;
+  border-left: 2px solid transparent;
+  margin-bottom: 6px;
+}
+
+.exp-tab.on {
+  border-left-color: var(--lime);
+  color: var(--lime);
+  background: rgba(200, 241, 53, 0.06);
+}
+
+.ep-date {
+  font-family: var(--f-code);
+  font-size: 11px;
+  color: var(--lime);
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.ep-role {
+  font-family: var(--f-head);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.ep-co {
+  font-family: var(--f-code);
+  font-size: 13px;
+  color: var(--t2);
+  margin-bottom: 24px;
+}
+
+.ep-co a {
+  color: var(--cyan);
+}
+
+.ep-list {
+  list-style: none;
+}
+
+.ep-list li {
+  padding: 10px 0 10px 22px;
+  position: relative;
+  font-size: 15px;
+  color: var(--t1);
+  line-height: 1.75;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.ep-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--lime);
+}
+
+.ep-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.ep-chip {
+  padding: 5px 14px;
+  border-radius: 7px;
+  font-family: var(--f-code);
+  font-size: 11px;
+  background: rgba(200, 241, 53, 0.08);
+  border: 1px solid rgba(200, 241, 53, 0.2);
+  color: var(--lime);
+}

@@ -1,0 +1,28 @@
+#stats {
+  position: relative;
+}
+
+.depth-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.depth-card {
+  background: var(--panel);
+  border: 1px solid var(--line2);
+  border-radius: 22px;
+  padding: 28px;
+}
+
+.depth-card h3 {
+  font-family: var(--f-head);
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.depth-card ul {
+  margin-left: 18px;
+  color: var(--t1);
+  line-height: 1.8;
+}

@@ -1,0 +1,134 @@
+#contact {
+  position: relative;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.cl-h2 {
+  font-family: var(--f-head);
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.cl-h2 em {
+  font-style: italic;
+  color: var(--lime);
+}
+
+.cl-p {
+  color: var(--t2);
+  font-size: 15.5px;
+  line-height: 1.85;
+  margin-bottom: 36px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cl-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  background: var(--panel);
+  border: 1px solid var(--line2);
+  border-radius: 16px;
+}
+
+.cl-link-icon {
+  font-size: 22px;
+  width: 32px;
+  text-align: center;
+}
+
+.cl-link-l {
+  font-family: var(--f-code);
+  font-size: 10px;
+  color: var(--t2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.cl-link-v {
+  font-family: var(--f-code);
+  font-size: 13px;
+}
+
+.contact-form {
+  background: var(--panel);
+  border: 1px solid var(--line2);
+  border-radius: 22px;
+  padding: 40px;
+}
+
+.cf-h {
+  font-family: var(--f-head);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.cf-row {
+  margin-bottom: 18px;
+}
+
+.cf-lbl {
+  font-family: var(--f-code);
+  font-size: 10.5px;
+  color: var(--t2);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.cf-input,
+.cf-area {
+  width: 100%;
+  background: var(--ink);
+  border: 1px solid var(--line2);
+  border-radius: 12px;
+  padding: 13px 18px;
+  color: var(--t0);
+  font-family: var(--f-ui);
+  font-size: 15px;
+  outline: none;
+}
+
+.cf-area {
+  height: 120px;
+  resize: none;
+}
+
+.cf-submit {
+  width: 100%;
+  background: var(--lime);
+  color: var(--ink);
+  border: none;
+  padding: 16px;
+  border-radius: 100px;
+  font-family: var(--f-ui);
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cf-note {
+  text-align: center;
+  font-family: var(--f-code);
+  font-size: 11px;
+  color: var(--t2);
+  margin-top: 14px;
+}
