@@ -1,4 +1,4 @@
-import { heroPills, heroStats, profile } from "../../data/portfolio";
+import { heroPills, heroStats, profile } from "../../data/data";
 
 export default function Hero() {
   return (

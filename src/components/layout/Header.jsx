@@ -1,4 +1,4 @@
-import { navLinks, profile } from "../../data/portfolio";
+import { navLinks, profile } from "../../data/data";
 
 export default function Header() {
   return (
