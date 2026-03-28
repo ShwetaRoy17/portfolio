@@ -7,8 +7,15 @@ import Projects from "./components/sections/Projects";
 import Stats from "./components/sections/Stats";
 import Experience from "./components/sections/Experience";
 import Contact from "./components/sections/Contact";
+import useReveal from "./hooks/useReveal";
+import useStickyNav from "./hooks/useStickyNav";
+
+
 
 export default function App() {
+  useReveal();
+  useStickyNav();
+
   return (
     <>
       <Header />
