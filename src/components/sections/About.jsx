@@ -1,4 +1,4 @@
-import { about, profile } from "../../data/data";
+import { about } from "../../data/data";
 
 export default function About() {
   return (
@@ -12,22 +12,13 @@ export default function About() {
             <em>Systems thinker.</em>
           </h2>
 
-          <p className="lede"><strong><em>{about.lede}</em></strong></p>
+          <p className="lede">
+            <strong><em>{about.lede}</em></strong>
+          </p>
 
           {about.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
-
-
-          <div className="trait-grid">
-            {about.traits.map((trait) => (
-              <div className="trait" key={trait.title}>
-                <div className="trait-icon">{trait.icon}</div>
-                <div className="trait-t">{trait.title}</div>
-                <div className="trait-d">{trait.description}</div>
-              </div>
-            ))}
-          </div>
         </div>
 
         <div className="about-visual reveal">
@@ -36,7 +27,7 @@ export default function About() {
               <div className="tb" style={{ background: "#ff5f57" }}></div>
               <div className="tb" style={{ background: "#febc2e" }}></div>
               <div className="tb" style={{ background: "#28c840" }}></div>
-              <div className="term-title">shweta@portfolio — zsh</div>
+              <div className="term-title">shweta@portfolio - zsh</div>
             </div>
 
             <div className="term-body">
@@ -49,10 +40,9 @@ export default function About() {
               <div style={{ margin: "10px 0 16px 0" }}>
                 <div>{`{`}</div>
                 <div>&nbsp;&nbsp;<span className="tk">name</span>: <span className="tv">'Shweta Roy'</span>,</div>
-                <div>&nbsp;&nbsp;<span className="tk">role</span>: <span className="tv">'Backend-Focused Software Engineer'</span>,</div>
-                <div>&nbsp;&nbsp;<span className="tk">focus</span>: [<span className="tv">'Backend'</span>, <span className="tv">'Concurrency'</span>, <span className="tv">'Distributed Systems'</span>],</div>
-                <div>&nbsp;&nbsp;<span className="tk">github</span>: <span className="tv">'ShwetaRoy17'</span>,</div>
-                <div>&nbsp;&nbsp;<span className="tk">leetcode</span>: <span className="tv">'1000+ problems'</span>,</div>
+                <div>&nbsp;&nbsp;<span className="tk">role</span>: <span className="tv">'Backend Engineer'</span>,</div>
+                <div>&nbsp;&nbsp;<span className="tk">focus</span>: [<span className="tv">'Distributed Systems'</span>, <span className="tv">'Concurrency'</span>, <span className="tv">'Streaming'</span>],</div>
+                <div>&nbsp;&nbsp;<span className="tk">research</span>: <span className="tv">'Deep Learning'</span>,</div>
                 <div>&nbsp;&nbsp;<span className="tk">available</span>: <span style={{ color: "var(--lime)" }}>true</span></div>
                 <div>{`}`}</div>
               </div>

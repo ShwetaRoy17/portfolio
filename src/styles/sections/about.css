@@ -34,41 +34,6 @@
   font-size: 15.5px;
 }
 
-.about-ctas {
-  margin-top: 24px;
-}
-
-.trait-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 40px;
-}
-
-.trait {
-  padding: 20px;
-  background: var(--panel);
-  border: 1px solid var(--line2);
-  border-radius: 18px;
-}
-
-.trait-icon {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.trait-t {
-  font-weight: 700;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.trait-d {
-  font-size: 13px;
-  color: var(--t2);
-  line-height: 1.6;
-}
-
 .term {
   background: #0a0a10;
   border: 1px solid var(--line);
