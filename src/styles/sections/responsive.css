@@ -16,10 +16,6 @@
     padding: 0 28px;
   }
 
-  .hero-right {
-    display: none;
-  }
-
   #about::before,
   #projects::before,
   #experience::before {
@@ -35,12 +31,12 @@
     gap: 40px;
   }
 
-  .skills-header-row {
+   .skills-header-row {
     grid-template-columns: 56px minmax(0, 1fr) 56px;
     gap: 14px;
   }
 
-  .toolkit-belt {
+  .toolkit-belt-page {
     grid-template-columns: 1fr;
   }
 
@@ -59,6 +55,10 @@
     text-align: center;
     padding: 24px 28px;
   }
+    .experience-cards {
+    grid-template-columns: 1fr;
+  }
+
 }
 
 @media (max-width: 900px) {
@@ -85,10 +85,6 @@
   #c-dot,
   #c-ring {
     display: none;
-  }
-
-  .trait-grid {
-    grid-template-columns: 1fr;
   }
 
   .skills-header-row {
