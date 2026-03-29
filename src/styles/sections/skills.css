@@ -2,16 +2,20 @@
   position: relative;
 }
 
-.skills-header-row {
+.skills-shell {
   display: grid;
   grid-template-columns: 64px minmax(0, 1fr) 64px;
-  gap: 20px;
+  gap: 22px;
   align-items: center;
-  margin-bottom: 24px;
+}
+
+.skills-main {
+  min-width: 0;
 }
 
 .skills-heading-block {
   text-align: center;
+  margin-bottom: 28px;
 }
 
 .skills-heading-block .s-tag {
@@ -27,36 +31,39 @@
 .skills-nav-arrow {
   width: 56px;
   height: 56px;
-  border-radius: 50%;
+  border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--panel);
   color: var(--t0);
   font-family: var(--f-code);
-  font-size: 24px;
-  cursor: pointer;
-  transition: all 0.25s ease;
+  font-size: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.skills-nav-arrow:hover:not(:disabled) {
+.skills-nav-arrow:hover {
+  transform: translateY(-2px);
   border-color: var(--lime);
   color: var(--lime);
-  transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
-
-.skills-nav-arrow:disabled {
-  opacity: 0.35;
-  cursor: default;
 }
 
 .toolkit-belt-wrap {
   overflow: hidden;
+  width: 100%;
 }
 
-.toolkit-belt {
+.toolkit-belt-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.toolkit-belt-page {
+  min-width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
@@ -84,6 +91,7 @@
   left: 0;
   right: 0;
   height: 2px;
+  opacity: 0.75;
 }
 
 .toolkit-icon {
@@ -112,11 +120,99 @@
   font-size: 11px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
-  color: #5a5a72;
-  transition: border-color 0.15s, color 0.15s;
+  color: var(--t2);
 }
 
-.toolkit-tag:hover {
-  border-color: rgba(200, 241, 53, 0.28);
-  color: var(--t1);
+@media (max-width: 1024px) {
+  .skills-shell {
+    grid-template-columns: 56px minmax(0, 1fr) 56px;
+    gap: 14px;
+  }
+
+  .toolkit-belt-page {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-shell {
+    grid-template-columns: 46px minmax(0, 1fr) 46px;
+  }
+
+  .skills-nav-arrow {
+    width: 46px;
+    height: 46px;
+    font-size: 18px;
+  }
+
+  .toolkit-belt-card {
+    min-height: auto;
+  }
+}
+.tech-globe {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  margin: 0 0 34px;
+  border-radius: 24px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(200, 241, 53, 0.08), transparent 38%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--line2);
+}
+
+.tech-globe-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.tech-globe-canvas:active {
+  cursor: grabbing;
+}
+
+.tech-globe-tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(10, 10, 16, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  transform: translate(-9999px, -9999px);
+  transition: opacity 0.16s ease;
+  white-space: nowrap;
+}
+
+.tg-tip-name {
+  font-family: var(--f-code);
+  font-size: 12px;
+  color: var(--t0);
+  margin-bottom: 3px;
+}
+
+.tg-tip-cat {
+  font-family: var(--f-code);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--t2);
+}
+
+@media (max-width: 1024px) {
+  .tech-globe {
+    height: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tech-globe {
+    height: 300px;
+    margin-bottom: 24px;
+  }
 }

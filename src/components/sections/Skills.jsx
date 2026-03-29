@@ -1,5 +1,7 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { skillGroups } from "../../data/data";
+import TechGlobe from "../ui/TechGlobe";
+
 
 const BAR_COLORS = {
   "sk-c1": "linear-gradient(90deg, transparent, #c8f135, transparent)",
@@ -10,23 +12,20 @@ const BAR_COLORS = {
   "sk-c6": "linear-gradient(90deg, transparent, #38d9f5, transparent)",
 };
 
-const VISIBLE_COUNT = 3;
+const CARDS_PER_PAGE = 3;
 
 function ToolkitCard({ icon, title, className, items }) {
-  const featured = items.slice(0, 6);
-
   return (
     <article className="toolkit-belt-card">
       <div
         className="toolkit-bar"
-        style={{ background: BAR_COLORS[className], opacity: 0.7 }}
+        style={{ background: BAR_COLORS[className] || BAR_COLORS.sk-c1 }}
       />
-
       <span className="toolkit-icon">{icon}</span>
       <div className="toolkit-title">{title}</div>
 
       <div className="toolkit-tags">
-        {featured.map((item) => (
+        {items.slice(0, 6).map((item) => (
           <span key={item} className="toolkit-tag">
             {item}
           </span>
@@ -37,76 +36,77 @@ function ToolkitCard({ icon, title, className, items }) {
 }
 
 export default function Skills() {
-  const [startIndex, setStartIndex] = useState(0);
-  const showControls = skillGroups.length > VISIBLE_COUNT;
+  const [page, setPage] = useState(0);
+  const totalPages = Math.ceil(skillGroups.length / CARDS_PER_PAGE);
 
-  const visibleSkills = useMemo(() => {
-    const items = [];
-    const total = Math.min(VISIBLE_COUNT, skillGroups.length);
-
-    for (let i = 0; i < total; i += 1) {
-      const index = (startIndex + i) % skillGroups.length;
-      items.push(skillGroups[index]);
-    }
-
-    return items;
-  }, [startIndex]);
-
-  const prevSlide = () => {
-    setStartIndex((prev) => (prev - 1 + skillGroups.length) % skillGroups.length);
+  const goPrev = () => {
+    setPage((prev) => (prev - 1 + totalPages) % totalPages);
   };
 
-  const nextSlide = () => {
-    setStartIndex((prev) => (prev + 1) % skillGroups.length);
+  const goNext = () => {
+    setPage((prev) => (prev + 1) % totalPages);
   };
 
   return (
     <section id="skills">
-      <div className="skills-header-row reveal">
+      <div className="skills-shell reveal">
         <button
           type="button"
-          className="skills-nav-arrow"
-          onClick={prevSlide}
+          className="skills-nav-arrow skills-nav-left"
+          onClick={goPrev}
           aria-label="Previous skills"
-          disabled={!showControls}
         >
           ←
         </button>
 
-        <div className="skills-heading-block">
-          <div className="s-tag">Skills & Stack</div>
-          <h2 className="s-h2">
-            My <em>toolkit.</em>
-          </h2>
-          <p className="s-desc">
-            Technologies I use across backend engineering, systems programming,
-            distributed systems, data systems, and applied research.
-          </p>
+        <div className="skills-main">
+          <div className="skills-heading-block">
+            <div className="s-tag">Skills & Stack</div>
+            <h2 className="s-h2">
+              My <em>toolkit.</em>
+            </h2>
+            <p className="s-desc">
+              Technologies I use across backend engineering, systems programming,
+              distributed systems, data systems, and applied research.
+            </p>
+          </div>
+          <TechGlobe />
+
+          <div className="toolkit-belt-wrap">
+            <div
+              className="toolkit-belt-track"
+              style={{ transform: `translateX(-${page * 100}%)` }}
+            >
+              {Array.from({ length: totalPages }).map((_, pageIndex) => {
+                const start = pageIndex * CARDS_PER_PAGE;
+                const pageItems = skillGroups.slice(start, start + CARDS_PER_PAGE);
+
+                return (
+                  <div className="toolkit-belt-page" key={pageIndex}>
+                    {pageItems.map((skill) => (
+                      <ToolkitCard
+                        key={skill.title}
+                        icon={skill.icon}
+                        title={skill.title}
+                        className={skill.className}
+                        items={skill.items}
+                      />
+                    ))}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         <button
           type="button"
-          className="skills-nav-arrow"
-          onClick={nextSlide}
+          className="skills-nav-arrow skills-nav-right"
+          onClick={goNext}
           aria-label="Next skills"
-          disabled={!showControls}
         >
           →
         </button>
-      </div>
-
-      <div className="toolkit-belt-wrap reveal">
-        <div className="toolkit-belt">
-          {visibleSkills.map((skill) => (
-            <ToolkitCard
-              key={`${skill.title}-${startIndex}`}
-              icon={skill.icon}
-              title={skill.title}
-              className={skill.className}
-              items={skill.items}
-            />
-          ))}
-        </div>
       </div>
     </section>
   );
