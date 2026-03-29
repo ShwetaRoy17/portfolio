@@ -1,9 +1,9 @@
-import { heroPills, heroStats, profile } from "../../data/data";
+import { heroPills, profile } from "../../data/data";
 
 export default function Hero() {
   return (
     <section id="hero">
-      <div className="hero-content">
+      <div className="hero-content hero-content-single">
         <div className="hero-left">
           <div className="hero-eyebrow hero-fade hero-fade-1">
             <span className="blink-dot"></span>
@@ -39,41 +39,27 @@ export default function Hero() {
               rel="noreferrer"
               className="btn-ghost"
             >
-              GitHub Profile ↗
+              GitHub ↗
             </a>
 
             <a
-              href={profile.resume}
+              href={profile.linkedin}
               target="_blank"
               rel="noreferrer"
               className="btn-ghost"
             >
-              View CV ↗
+              Linkedin
             </a>
 
             <a href={profile.resume} download className="btn-ghost">
-              Download CV
+              View CV
             </a>
-          </div>
-        </div>
-
-        <div className="hero-right hero-fade hero-fade-6">
-          <div className="stat-stack">
-            {heroStats.map((item) => (
-              <div className="stat-card" key={item.label}>
-                <div className="sc-accent">{item.icon}</div>
-                <div>
-                  <div className="sc-val">{item.value}</div>
-                  <div className="sc-lbl">{item.label}</div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
 
       <div className="scroll-cue">
-        <div className="sct aroll-line"></div>
+        <div className="scroll-line"></div>
         Scroll
       </div>
     </section>

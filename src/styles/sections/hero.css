@@ -13,11 +13,18 @@
   z-index: 2;
   padding: 0 56px;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 440px;
-  gap: 60px;
-  align-items: center;
 }
+
+.hero-content-single {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-left {
+  max-width: 880px;
+}
+
+
 
 .hero-fade {
   opacity: 0;
@@ -105,34 +112,6 @@
   flex-wrap: wrap;
 }
 
-.stat-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.stat-card {
-  background: var(--glass);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 20px 24px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.sc-val {
-  font-family: var(--f-head);
-  font-size: 32px;
-  font-weight: 900;
-  color: var(--lime);
-}
-
-.sc-lbl {
-  font-family: var(--f-code);
-  font-size: 11px;
-  color: var(--t2);
-}
 
 .scroll-cue {
   position: absolute;
