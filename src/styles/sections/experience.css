@@ -13,98 +13,104 @@
   background: linear-gradient(90deg, transparent, var(--violet), transparent);
 }
 
-.exp-layout {
+.experience-cards {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 56px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
-.exp-tabs {
-  position: sticky;
-  top: 96px;
-  height: fit-content;
+.experience-card {
+  position: relative;
+  min-height: 280px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border: 1px solid var(--line2);
+  border-radius: 22px;
+  padding: 24px;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.exp-tab {
-  width: 100%;
-  text-align: left;
-  background: transparent;
-  padding: 14px 18px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-family: var(--f-code);
-  font-size: 12.5px;
-  color: var(--t2);
-  border: none;
-  border-left: 2px solid transparent;
+.experience-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(155, 143, 255, 0.28);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--violet), transparent);
+  opacity: 0.75;
+}
+
+.experience-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.experience-company {
+  font-family: var(--f-head);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
   margin-bottom: 6px;
 }
 
-.exp-tab.on {
-  border-left-color: var(--lime);
-  color: var(--lime);
-  background: rgba(200, 241, 53, 0.06);
+.experience-location {
+  font-family: var(--f-code);
+  font-size: 12px;
+  color: var(--t2);
+  letter-spacing: 0.04em;
 }
 
-.ep-date {
+.experience-index {
+  font-family: var(--f-head);
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.05);
+  user-select: none;
+}
+
+.experience-timeline {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
   font-family: var(--f-code);
   font-size: 11px;
   color: var(--lime);
-  letter-spacing: 0.1em;
+  background: rgba(200, 241, 53, 0.08);
+  border: 1px solid rgba(200, 241, 53, 0.18);
+  margin-bottom: 18px;
+}
+
+.experience-stack-label {
+  font-family: var(--f-code);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--t2);
   margin-bottom: 12px;
 }
 
-.ep-role {
-  font-family: var(--f-head);
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.ep-co {
-  font-family: var(--f-code);
-  font-size: 13px;
-  color: var(--t2);
-  margin-bottom: 24px;
-}
-
-.ep-co a {
-  color: var(--cyan);
-}
-
-.ep-list {
-  list-style: none;
-}
-
-.ep-list li {
-  padding: 10px 0 10px 22px;
-  position: relative;
-  font-size: 15px;
-  color: var(--t1);
-  line-height: 1.75;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-.ep-list li::before {
-  content: "▸";
-  position: absolute;
-  left: 0;
-  color: var(--lime);
-}
-
-.ep-chips {
+.experience-stack {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 22px;
 }
 
-.ep-chip {
-  padding: 5px 14px;
-  border-radius: 7px;
+.experience-chip {
+  padding: 6px 12px;
+  border-radius: 999px;
   font-family: var(--f-code);
   font-size: 11px;
-  background: rgba(200, 241, 53, 0.08);
-  border: 1px solid rgba(200, 241, 53, 0.2);
-  color: var(--lime);
+  color: var(--t1);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
