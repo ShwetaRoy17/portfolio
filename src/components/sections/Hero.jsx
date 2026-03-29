@@ -51,7 +51,7 @@ export default function Hero() {
               Linkedin
             </a>
 
-            <a href={profile.resume} download className="btn-ghost">
+            <a href={profile.resume} target="_blank" rel="noreferrer" className="btn-ghost">
               View CV
             </a>
           </div>

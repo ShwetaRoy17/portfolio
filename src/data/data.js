@@ -7,7 +7,7 @@ export const profile = {
     github: "https://github.com/ShwetaRoy17",
     linkedin: "https://www.linkedin.com/in/shweta-roy-104145227/",
     leetcode: "https://leetcode.com/u/shwetaroy1712/",
-    resume: "/resume/RoyShweta2026.pdf",
+    resume: "https://drive.google.com/file/d/1tcGmE5bBd-B3pRrz5obCulKY0JxzGf6o/view?usp=sharing",
     heroTitle: ["Building", "scalable systems", "that perform."],
     heroBio:
         "Backend-focused software engineer with hands-on experience in scalable, low-latency systems across fintech and real-time streaming platforms. Strong foundation in distributed systems, concurrency, backend engineering, and research-driven problem solving."
@@ -47,18 +47,15 @@ export const skillGroups = [
         className: "sk-c1",
         ghost: "01",
         items: [
-            "Spring Boot",
-            "REST APIs",
             "Microservices Architecture",
             "Distributed Systems Design",
             "API Design & Optimization",
             "High Availability Systems",
             "AWS",
-            "OpenSearch"
         ]
     },
     {
-        icon: "⚡",
+        icon: "💻⚙️",
         title: "Concurrency & Systems Programming",
         className: "sk-c2",
         ghost: "02",
@@ -72,24 +69,11 @@ export const skillGroups = [
             "Low-latency System Design"
         ]
     },
+    
     {
-        icon: "🎥",
-        title: "Streaming & Real-Time Systems",
-        className: "sk-c3",
-        ghost: "03",
-        items: [
-            "FFmpeg Pipelines",
-            "Adaptive Bitrate Streaming",
-            "Live Streaming Architectures",
-            "Real-time Video Processing",
-            "Distributed Streaming Systems",
-            "Logging & Monitoring Pipelines"
-        ]
-    },
-    {
-        icon: "🧠",
+        icon: "</>",
         title: "Machine Learning & Data Systems",
-        className: "sk-c4",
+        className: "sk-c3",
         ghost: "04",
         items: [
             "GAN",
@@ -105,7 +89,7 @@ export const skillGroups = [
     {
         icon: "🗄️",
         title: "Databases & Storage",
-        className: "sk-c5",
+        className: "sk-c4",
         ghost: "05",
         items: [
             "MySQL",
@@ -120,7 +104,7 @@ export const skillGroups = [
     {
         icon: "🛠️",
         title: "Tools, Languages & CS Foundations",
-        className: "sk-c6",
+        className: "sk-c5",
         ghost: "06",
         items: [
             "Java",
@@ -129,6 +113,7 @@ export const skillGroups = [
             "Python",
             "JavaScript",
             "Shell Scripting",
+            "Bash",
             "Docker",
             "Kubernetes",
             "Git",
@@ -155,7 +140,7 @@ export const projects = [
         ],
         tags: ["Go", "Systems Programming", "Process Management", "Command Parsing", "OS Concepts"],
         live: "",
-        code: "https://github.com/ShwetaRoy17"
+        code: "https://github.com/ShwetaRoy17/"
     },
     {
         title: "Go Web Crawler",
@@ -177,7 +162,7 @@ export const projects = [
     {
         title: "GC-LFF",
         type: "Research / ML Systems",
-        emoji: "🧠",
+        emoji: "📄",
         background: "linear-gradient(135deg,#130b18,#0c0711)",
         description:
             "Federated GAN-CNN-LSTM framework for robust AQI forecasting across distributed data sources, combining data imputation, temporal modeling, and communication-aware learning.",
@@ -214,7 +199,7 @@ export const experienceTabs = [
     {
         id: "work",
         label: "Professional Experience",
-        icon: "💼",
+        icon: "briefcase",
         date: "Current + Previous",
         role: "Software Engineer / Intern",
         company: "Kotak Tech · Morgan Stanley · Samsung Research",
@@ -229,7 +214,7 @@ export const experienceTabs = [
     {
         id: "research",
         label: "Research",
-        icon: "🧠",
+        icon: "researchgate",
         date: "Published Work",
         role: "ML Research Contributor",
         company: "Elsevier Journal Publication",
@@ -244,7 +229,7 @@ export const experienceTabs = [
     {
         id: "projects",
         label: "Projects",
-        icon: "🚀",
+        icon: "code",
         date: "Hands-on Engineering",
         role: "Systems & Backend Project Builder",
         company: "Independent Projects",
@@ -283,27 +268,27 @@ export const experiences = [
 
 export const contactLinks = [
     {
-        icon: "🐙",
+        icon:  "github",
         label: "GitHub",
         value: "github.com/ShwetaRoy17",
         href: "https://github.com/ShwetaRoy17"
     },
     {
-        icon: "💼",
+        icon: "linkedin",
         label: "LinkedIn",
         value: "Shweta Roy",
         href: "https://www.linkedin.com/in/shweta-roy-104145227/"
     },
     {
-        icon: "⚡",
+        icon: "leetcode",
         label: "LeetCode",
         value: "1000+ problems",
         href: "https://leetcode.com/u/shwetaroy1712/"
     },
     {
-        icon: "📧",
+        icon: "envelope",
         label: "Email",
-        value: "your-real-email@example.com",
-        href: "mailto:your-real-email@example.com"
+        value: "royshweta1712@example.com",
+        href: "royshweta1712@example.com"
     }
 ];
